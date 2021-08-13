@@ -14,7 +14,9 @@ pipeline {
     }
     stage ('test') {
       steps {
-        sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
+        sh ''' #!/bin/bash
+        py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
+        '''
       }
       post {
         always {

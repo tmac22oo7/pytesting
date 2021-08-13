@@ -5,6 +5,7 @@ pipeline {
     stage ('Build') {
       steps {
         sh '''
+        python3 -m venv unit_test/env
         source ~/unit_test/env/bin/activate
         pipenv install
         '''

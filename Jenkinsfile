@@ -2,7 +2,7 @@
 pipeline {
   agent any
   stages { 
-    stage ('test') {
+    stage ('build') {
       steps {
        sh '''#!/bin/bash
        python3 -m venv test3
